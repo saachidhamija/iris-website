@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>iris — where connections become communities</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -681,11 +682,13 @@
     align-items: start;
   }
   .footer-logo {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 28px; font-weight: 500; letter-spacing: -0.03em;
-    color: #fff;
+    width: 72px; height: 44px;
+    position: relative; overflow: hidden; display: block;
+    color: #f1eadf;
     margin-bottom: 14px;
   }
+  .footer-logo .nav-logo-word { color: #f1eadf; }
+  .footer-logo .nav-logo-plane { background: #f1eadf; }
   .footer-tagline {
     font-size: 15px; font-weight: 300; letter-spacing: 0.04em;
     color: rgba(255,255,255,0.45);
@@ -926,7 +929,7 @@
 <footer>
   <div class="site-footer">
     <div class="footer-brand">
-      <div class="footer-logo">iris</div>
+      <div class="footer-logo" aria-label="Iris"><span class="nav-logo-plane" aria-hidden="true"></span><span class="nav-logo-word">iris</span></div>
       <div class="footer-tagline">where connections become communities</div>
       <div class="footer-email"><a href="mailto:socialofiris@gmail.com">socialofiris@gmail.com</a></div>
     </div>

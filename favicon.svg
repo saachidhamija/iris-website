@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .mark { fill: #111110; }
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #e07a5f; }
+    }
+  </style>
+  <path class="mark" d="M45.4 4.7 16.8 17.1l17.7 4.8 4.9 17.6L51.8 10.9c1.2-2.9-3.5-7.4-6.4-6.2Z"/>
+  <text class="mark" x="6" y="52" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="-3">iris</text>
+</svg>
