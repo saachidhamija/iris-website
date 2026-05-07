@@ -333,6 +333,33 @@
   }
 
   /* ════════════════
+     DESIGN PARTNERS
+  ════════════════ */
+  .p-partners {
+    background: var(--white);
+    flex-direction: column;
+    gap: clamp(28px, 4vw, 48px);
+    padding: 86px 6vw 72px;
+  }
+  .partners-card {
+    width: min(780px, 88vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(28px, 4vw, 42px);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .partners-card.in { opacity: 1; transform: none; }
+  .partner-logo {
+    width: min(560px, 78vw);
+    height: auto;
+    display: block;
+  }
+
+  /* ════════════════
      P3 · PRODUCT
   ════════════════ */
   .p-product {
@@ -809,6 +836,14 @@
     <div class="edit-hint">click any text to edit</div>
   </div>
 
+<!-- DESIGN PARTNERS -->
+  <div class="panel p-partners" id="sec-partners" data-nav="sec-team">
+    <div class="partners-card" id="partners-card">
+      <div class="how-label">Design partners</div>
+      <img class="partner-logo" src="assets/images/pack-ventures-logo.png" alt="Pack Ventures"/>
+    </div>
+  </div>
+
 <!-- P5: CTA -->
   <div class="panel p-cta" id="sec-contact" data-idx="4">
     <div class="cta-wrap" id="cw">
@@ -890,7 +925,7 @@
   const navLogo   = document.getElementById('nav-logo');
   const navLinks  = document.querySelectorAll('.nav-links a');
   const siteNav   = document.getElementById('site-nav');
-  const sections  = ['sec-hero','sec-intro','sec-about','sec-features','sec-org-search','sec-member-onboard','sec-member-search','sec-team','sec-contact'];
+  const sections  = ['sec-hero','sec-intro','sec-about','sec-features','sec-org-search','sec-member-onboard','sec-member-search','sec-team','sec-partners','sec-contact'];
   const panels    = document.querySelectorAll('.panel');
 
   const io = new IntersectionObserver(entries => {
@@ -918,6 +953,9 @@
         }
         if (id === 'sec-contact') {
           document.getElementById('cw').classList.add('in');
+        }
+        if (id === 'sec-partners') {
+          document.getElementById('partners-card').classList.add('in');
         }
       }
     });
